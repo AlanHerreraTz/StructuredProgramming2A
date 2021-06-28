@@ -12,7 +12,7 @@ def swap (param1, param2):
     a = b
     b = temp
 
-    hi.upper()
+    ##h.upper()
 
 if __name__ == "__name__":
     print("Swap Program") 
