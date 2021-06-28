@@ -1,9 +1,12 @@
 #include <stdio.h>
-#include "./utils.h"
+
 #include <stdlib.h>
 
 int var1 = 10;
 int var2 = 20;
+
+
+#include "./utils.h"
 
 int main (int argc, char** argv){
     printf( "Just main: var1= %d, var2= %d\n", var1, var2);
@@ -25,6 +28,10 @@ int main (int argc, char** argv){
     *myptr1 = 20;
     var2 = 40;
 
+    int** ptrDouble = &myptr1;
+    **ptrDouble;
+    
+
     printf("var1 = %d, var2 = %d\n", var1 , var2);
 
     showIntadress ( myptr1);
@@ -42,6 +49,10 @@ int main (int argc, char** argv){
     printf("var1= %d, var2= %d \n", var1, var2);
     //Dentro del codigo debe ir algo asi:
         // *0x7f2044a01018 = 100;
+
+    swap(&var1, &var2);
+    swapGlobal();
+    printf( "myVar1 = %d, myVar2= %d\n", myVar1, myVar2);
 
     return 0;
 }
